@@ -15,7 +15,7 @@ export class CalculatorService {
     public constructNumber(value: string): void {
         // Validate input
         if (![...numbers, ...operators, ...specialOperators].includes(value)) {
-            console.log(`Invalid input: ${value}`);
+            // console.log(`Invalid input: ${value}`);
             return;
         }
 
@@ -66,7 +66,7 @@ export class CalculatorService {
 
         // Limitar numero de caracteres
         if (this.resultText().length >= 10) {
-            console.log("Número máximo de caracteres alcanzado");
+            // console.log("Número máximo de caracteres alcanzado");
             return;
         }
 
@@ -120,7 +120,7 @@ export class CalculatorService {
     public calculateResult(): void {
         const number1 = parseFloat(this.subResultText());
         const number2 = parseFloat(this.resultText());
-        console.log(number1, number2);
+        // console.log(number1, number2);
         let result = 0;
 
         switch (this.lastOperator()) {
