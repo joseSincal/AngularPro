@@ -1,6 +1,7 @@
 import { Routes } from "@angular/router";
 
 export const routes: Routes = [
+    { path: "", redirectTo: "about" },
     {
         path: "pokemons",
         loadComponent: () => import("./pages/pokemons/pokemons-page.component"),
@@ -23,6 +24,8 @@ export const routes: Routes = [
     },
     {
         path: "**",
-        redirectTo: "about",
+        redirectTo: () => {
+            return "about";
+        },
     },
 ];
