@@ -10,6 +10,5 @@ module.exports = function (config) {
         flags: ['--no-sandbox', '--disable-setuid-sandbox'],
       },
     },
-    // ... resto de tu configuración
   });
 };
