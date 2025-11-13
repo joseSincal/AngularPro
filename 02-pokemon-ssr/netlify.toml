@@ -1,0 +1,2 @@
+  [build]
+    environment = { CHROME_BIN = "/path/to/chrome/binary" }
