@@ -1,2 +1,2 @@
   [build]
-    environment = { CHROME_BIN = "/path/to/chrome/binary" }
+    environment = { CHROME_BIN = "/opt/buildhome/.local/share/mise/installs/go/1.25.4/misc/chrome" }
