@@ -1,6 +1,6 @@
 import { RenderMode, ServerRoute } from "@angular/ssr";
 
-const TOTAL_POKEMONS = 10;
+const TOTAL_POKEMONS = 20;
 
 export const serverRoutes: ServerRoute[] = [
     {
