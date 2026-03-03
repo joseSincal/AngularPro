@@ -1,0 +1,9 @@
+<h1 class="text-3xl font-bold underline">Hola Mundo</h1>
+<p>Hola de nuevo</p>
+
+<lib-apx-side-menu
+  [isAuthenticated]="isAuthenticated()"
+  [titleColor]="TitleColor.blue"
+  (signIn)="isAuthenticated.set(true)"
+  (signOut)="isAuthenticated.set(false)"
+/>

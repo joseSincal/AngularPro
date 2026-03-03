@@ -1,0 +1,13 @@
+{
+  "name": "apx-side-menu-jossito",
+  "version": "0.0.3",
+  "keywords": ["do-not-use"],
+  "peerDependencies": {
+    "@angular/common": "^20.3.0",
+    "@angular/core": "^20.3.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

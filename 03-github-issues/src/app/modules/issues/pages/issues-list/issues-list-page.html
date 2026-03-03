@@ -1,0 +1,59 @@
+<h1>Github Issues</h1>
+<hr class="my-5 border-b-2 border-blue-600" />
+
+<section class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+  <!-- Botones para controlar el Estado (State) -->
+  <div class="col-span-3 flex flex-col">
+    <div class="flex gap-2">
+      <button
+        [class.active]="issuesService.selectedState() === 'all'"
+        class="btn"
+        (click)="onChangeState('all')"
+      >
+        All
+      </button>
+      <button
+        [class.active]="issuesService.selectedState() === 'open'"
+        class="btn"
+        (click)="onChangeState('open')"
+      >
+        Open
+      </button>
+      <button
+        [class.active]="issuesService.selectedState() === 'closed'"
+        class="btn"
+        (click)="onChangeState('closed')"
+      >
+        Closed
+      </button>
+    </div>
+  </div>
+
+  <!-- Listado -->
+  <div class="mt-4 flex flex-col col-span-2">
+    <!-- TODO listado de issues -->
+    @for (issue of issuesQuery.data() ?? []; track issue.id) {
+    <issue-item [issue]="issue" />
+    } @empty { @if (issuesQuery.isLoading()) {
+    <p>Cargando issues...</p>
+    } @else {
+    <p>No hay issues que mostrar</p>
+    } }
+
+    <!-- TODO: Spinner -->
+
+    <!-- TODO: Si no hay issues por el filtro -->
+  </div>
+
+  <!-- Labels -->
+  <div>
+    <!-- TODO: Spinner -->
+    @if (labelsQuery.isLoading()) {
+    <p>Estamos cargando</p>
+    } @else {
+    <issues-labels-selector [labels]="labelsQuery.data() ?? []" />
+    }
+
+    <!-- TODO: Label Selector -->
+  </div>
+</section>
